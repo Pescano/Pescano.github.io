@@ -1,0 +1,25 @@
+/*esto es un selector universal*/
+* { color: red;
+	font-family: Verdana;
+	font-size: 14px;}
+/*esto es un selector de etiqueta*/
+h2 {font-family: 'Times New Roman';
+	font-size: 18px;
+	color: goldenrod;}
+/*esto es un selector de clase*/
+.especial { color: green; 
+			font-family: Arial;}
+/*<p class="especial">
+Así seria un ejemplo en html</p>*/
+/*esto es un selector de ID*/
+#id {color: magenta;
+	 font-family: Georgia;}
+/*<p id="id">
+Así seria un ejemplo en html</p>*/
+/*esto es un selector descendente*/
+p em {color: royalblue; }
+/*<p><em>Así sería un ejemplo en html</em></p>*/
+/*esto seria un selector adyacente*/
+h1+h2 {color: brown; font-family: Cambria;}
+/*esto seria un selector de atributo*/
+p[title] {font-family: Arial; color: black;}
