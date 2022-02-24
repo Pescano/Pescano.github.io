@@ -1,0 +1,30 @@
+body {
+	background-color: rgb(95, 93, 93);
+}
+
+p {
+	background-color: lime;
+	border: 5px dotted red;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+}
+
+#caja1 {
+	background-color: red;
+	margin: 25px auto;
+	width: 80%;
+	padding: 25px;
+	border: 3px dashed blue;
+}
+
+#caja2 {
+	background-color: yellow;
+	margin: 0 auto ;
+	width: 75%;
+	border: 2px solid;
+	padding-left: 25px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-right: 25px;
+	border-top-width: 10px;
+}

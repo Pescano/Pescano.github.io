@@ -1,0 +1,25 @@
+body	   {background: #bbb url('./imagenes/bg_page.png') repeat-y fixed center;}
+
+#contenido {margin: 0 auto;
+			width: 750px;
+			background-position: center;}
+
+.a		   {list-style-type:square;}
+
+img		   {border: solid 3px;}
+
+h2		   {text-decoration: underline;}
+
+h3		   {font-family: Verdana, sans-serif;
+			font-size: 20px;
+			color: navy;
+			letter-spacing: 4px;}
+
+h1		   {font-family: calibri;
+			font-size: 32px;
+			color: darkred;
+			text-align: center;}
+	
+p		   {font-family: Verdana;
+			font-size: 16px;
+			color: grey;}

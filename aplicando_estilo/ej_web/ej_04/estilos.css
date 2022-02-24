@@ -1,0 +1,14 @@
+#contenido {background: #e6e6fa;
+			margin: 0 auto;
+			width: 75%;}
+
+img		   {width: 760px;
+			height: 198px;
+			border: solid 3px;}
+
+h2		   {text-decoration: underline;}
+
+h3		   {font-family: Verdana, sans-serif;
+			font-size: 20px;
+			color: navy;
+			letter-spacing: 4px;}
