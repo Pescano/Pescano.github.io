@@ -1,0 +1,42 @@
+p {
+	color: #505050;
+	font-family: Calibri;
+	font-size: 16px;
+	margin-left: 75px;
+	text-align: justify;
+}
+
+h1, h2, h3 {
+	color: #bd8100;
+	font-family: Baskerville;
+	border-top: 2px solid #86a100;
+	padding-top: 7px;
+	padding-left: 75px;
+}
+
+.note {
+	color: #333;
+	border: #bd8100 dashed 2px;
+	background-color: #fbf8a9;
+	margin-top: 25px;
+	margin-bottom: 35px;
+	padding: 20px;
+}
+
+.note strong {
+	color: #fc6512;
+}
+
+body {
+	background: #fdf8ab url('./imagenes/fondo.png') repeat-y fixed center;
+	padding: 0px;
+	margin: 0 auto;
+	background-position: center;
+	width: 760px;
+}
+
+#banner {
+	width: 760px;
+	height: 200px;
+	margin-top: 15px;
+}

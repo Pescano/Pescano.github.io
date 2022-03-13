@@ -1,0 +1,19 @@
+p {
+	color: #ff6600;
+	margin-left: 50px;
+	padding-left: 20px;
+	border-left: solid 25px #bd8100;
+}
+
+.pagestyle {
+	font-family: 'Helvetica Neue', Arial, Helvetica;
+	font-size: 18px;
+	color: #bd8100;
+	width: 900px;
+	margin: 0 auto;
+}
+
+li {
+	list-style-image: url('./imagenes/css.png');
+	margin-left: 150px;
+}
