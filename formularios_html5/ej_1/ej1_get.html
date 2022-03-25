@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+	<title>Formulario con GET</title>
+</head>
+<body>
+	<h2>Rellena tu CV</h2>
+	<form action="./php/insertar_CV.php" method="get">
+		Nombre<br>
+		<input name="nombre" type="text" size="15" maxlength="30">
+		<br><br>
+		Apellidos<br>
+		<input name="apellidos" type="text" size="30" maxlength="80">
+		<br><br>
+		Contraseña<br>
+		<input name="contraseña" type="password" size="15" maxlength="10">
+		<br><br>
+		DNI<br>
+		<input name="dni" type="text" size="10" maxlength="9">
+		<br><br>
+		<legend>Sexo</legend>
+		<input type="radio" name="hombre" value="hombre" checked="checked"> Hombre<br>
+		<input type="radio" name="mujer" value="mujer"> Mujer
+		<br><br>
+		<input type="checkbox" name="suscribir" value="suscribir" checked="checked"> Suscribirme al boletín de novedades
+		<br><br>
+		<input type="submit" value="Guardar cambios" name="enviar">
+		<input type="reset" value="Borrar los datos introducidos" name="cancelar">
+	</form>
+</body>
+</html>

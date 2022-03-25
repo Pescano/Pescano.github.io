@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+	<title>Formulario con POST</title>
+</head>
+<body>
+	<h2>Rellena tu CV</h2>
+	<form action="./php/insertar_CV.php" method="post">
+		Nombre<br>
+		<input name="nombre" type="text" size="15" maxlength="30">
+		<br>
+		Apellidos<br>
+		<input name="apellidos" type="text" size="30" maxlength="80">
+		<br>
+		Contraseña<br>
+		<input name="contraseña" type="password" size="15" maxlength="10">
+		<br>
+		DNI<br>
+		<input name="dni" type="text" size="10" maxlength="9">
+		<br>
+		<legend>Sexo</legend>
+		<input type="radio" name="sexo" value="hombre" checked="checked"> Hombre<br>
+		<input type="radio" name="sexo" value="mujer"> Mujer
+		<br>
+		<label>Incluir mi foto</label>
+		<input type="text" name="comentario_fichero">
+		<input name="imagen" type="file" value="Elegir">
+		<br>
+		<input type="checkbox" name="suscribir" value="suscribir" checked="checked"> Suscribirme al boletín de novedades
+		<br>
+		<input type="submit" value="Guardar cambios" name="enviar">
+		<input type="reset" value="Borrar los datos introducidos" name="cancelar">
+	</form>
+</body>
+</html>
