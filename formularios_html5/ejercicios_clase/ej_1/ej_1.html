@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+	<title>Formulario </title>
+</head>
+<body>
+	<h2>Rellena tu CV</h2>
+	<form action="./php/media.php" method="post">
+		Precio producto establecimiento 1:
+		<input name="precio1" type="text" size="15" maxlength="9">
+		<br>
+		Precio producto establecimiento 2: 
+		<input name="precio2" type="text" size="15" maxlength="9">
+		<br>
+		Precio producto establecimiento 3: 
+		<input name="precio3" type="text" size="15" maxlength="9">
+		<br>
+		<input type="submit" value="Guardar cambios" name="enviar">
+		<input type="reset" value="Borrar los datos introducidos" name="cancelar">
+	</form>
+</body>
+</html>
