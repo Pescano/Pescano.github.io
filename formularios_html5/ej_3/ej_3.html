@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+	<title>Información sobre el producto</title>
+</head>
+<body>
+	<h2>Información sobre el producto</h2>
+	<form action="./porcentaje.php" method="post">
+		<fieldset>
+			<legend>Datos básicos</legend>
+			<div>
+				<label for="nombre">Nombre</label><br>
+				<input name="nombre" type="text" size="60" maxlength="30">
+				<br><br>
+				<label for="descripcion">descripción</label><br>
+				<textarea name="descripcion" cols="40" rows="5"></textarea>
+				<br><br>
+				<label for="foto">Foto</label>
+				<input type="text" name="comentario_fichero">
+				<input name="imagen" type="file" value="Elegir">
+				<br><br>
+				<input type="checkbox" name="visitas" value="visitas"> Añadir contador de visitas
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Datos económicos</legend>
+			<div>
+				<label for="precio">Precio </label>
+				<input name="precio1" type="text" size="15" maxlength="9">
+				<label for="impuesto"> $      Impuestos </label>
+				<select id="impuesto" name="impuestos">
+					<option value="porcentaje1" selected="selected">4%</option>
+					<option value="porcentaje2">7%</option>
+					<option value="porcentaje3">16%</option>
+					<option value="porcentaje4">25%</option>
+				</select><br><br>
+				<legend>Promoción</legend>
+				<input type="radio" name="promocion" value="ninguno"> Ninguno<br>
+				<input type="radio" name="promocion" value="transporte"> Transporte<br>
+				<input type="radio" name="promocion" value="descuento"> Descuento 5%<br>
+				<input type="submit" value="Guardar cambios" name="enviar">
+				<input type="reset" value="Borrar los datos introducidos" name="cancelar">				
+			</div>
+		</fieldset>
+	</form>
+	<a href="../../index.html">Volver</a>
+</body>

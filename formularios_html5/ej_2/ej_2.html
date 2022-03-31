@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+	<title>Rellena tu CV</title>
+</head>
+<body>
+	<h2>Rellena tu CV</h2>
+	<form action="" method="post">
+		<fieldset>
+			<legend>Datos personales</legend>
+			<div>
+				<label for="provincia">Provincia</label><br>
+				<select id="provincias" name="provincias">
+					<option value="" selected="selected">- selecciona -</option>
+					<option value="malaga">Málaga</option>
+					<option value="cordoba">Cordoba</option>
+					<option value="cadiz">Cadiz</option>
+					<option value="huelva">Huelva</option>
+					<option value="jaen">Jaen</option>
+					<option value="almeria">Almeria</option>
+					<option value="granada">Granada</option>
+					<option value="sevilla">Sevilla</option>
+				</select><br><br>
+				<label for="fecha">Fecha de nacimiento</label><br>
+				<input type="date" name="fecha">
+				<br><br>
+				<label for="temas">Temas de interés</label><br>
+				<select name="seleccion" id="seleccion" multiple="multiple" size="5">
+					<option value="opcion1" selected="selected">Administración de bases de datos</option>
+					<option value="opcion2">Análisis y progrmación</option>
+					<option value="opcion3">Arquitectura</option>
+					<option value="opcion4">Calidad</option>
+					<option value="opcion5">ERP, CRM, Business Intelligence</option>
+					<option value="opcion6">Electrónica</option>
+					<option value="opcion7">Diseño lógico</option>
+				</select>
+				<br><br>
+				<input type="submit" value="Guardar cambios" name="enviar">
+				<input type="reset" value="Borrar los datos introducidos" name="cancelar">	
+			</div>
+		</fieldset>
+	</form>
+	<a href="../../index.html">Volver</a>
+</body>
+</html>
