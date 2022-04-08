@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+	<link rel="stylesheet" href="../../../index.css">
+	<title>Relación 1: Operadores</title>
+</head>
+<body>
+<div id="content">
+	<!--1.Introduce tres números y calcula la suma, mostrándola con alert.-->
+	<form name="ej1">
+		<fieldset>
+			<legend style="text-decoration: none;">Introduce tres números para calcular la suma.</legend>
+			Numero 1: <input type="text" name="n1" value="" size="5"><br>
+			Numero 2: <input type="text" name="n2" value="" size="5"><br>
+			Numero 3: <input type="text" name="n3" value="" size="5"><br>
+			<input type="submit" value="Calcular Suma" onclick="
+				nu1=parseInt(ej1.n1.value);
+				nu2=parseInt(ej1.n2.value);
+				nu3=parseInt(ej1.n3.value);
+				resultado=nu1+nu2+nu3;
+				alert('La Suma es: ' + resultado);
+			">
+		</fieldset>
+	</form>
+	<!--2.Introduce cinco números en cajas de texto y calcula la media.-->
+	<form name="ej2">
+		<fieldset>
+			<legend>Introduce cinco números para calcular la media.</legend>
+			Numero 1: <input type="text" name="n1" value="" size="5"><br>
+			Numero 2: <input type="text" name="n2" value="" size="5"><br>
+			Numero 3: <input type="text" name="n3" value="" size="5"><br>
+			Numero 4: <input type="text" name="n4" value="" size="5"><br>
+			Numero 5: <input type="text" name="n5" value="" size="5"><br>
+			<input type="submit" value="Calcular media" onclick="
+				nu1=parseInt(ej2.n1.value);
+				nu2=parseInt(ej2.n2.value);
+				nu3=parseInt(ej2.n3.value);
+				nu4=parseInt(ej2.n4.value);
+				nu5=parseInt(ej2.n5.value);
+				resultado=(nu1+nu2+nu3+nu4+nu5)/5;
+				alert('La media es: ' + resultado);
+			">
+		</fieldset>
+	</form>
+	<!--3.Calcula el cuadrado de un número introducido por teclado.-->
+	<form name="ej3">
+		<fieldset>
+			<legend>Introduce la base de la potencia</legend>
+			Base: <input type="text" name="b" value="" size="5"><br>
+			<input type="submit" value="Calcular potencia" onclick="
+				base=parseInt(ej3.b.value);
+				resultado= base * base;
+				alert('La potencia es: ' + resultado);
+			">
+		</fieldset>
+	</form>
+	<!--4.Introduce dos números por teclado y calcula la suma, la resta, el producto y el resto imprimiéndolos en la web.-->
+	<form name="ej4">
+		<fieldset>
+			<legend>Introduce 2 numeros para sumar, restar, multiplicar y dividir</legend>
+			Numero1: <input type="text" name="nu1" value="" size="5"><br>
+			Numero2: <input type="text" name="nu2" value="" size="5"><br>
+			<input type="submit" value="Calcular operaciones" onclick="
+				Numero1=parseInt(ej4.nu1.value);
+				Numero2=parseInt(ej4.nu2.value);
+				resultado=Numero1+Numero2;
+				document.write('Suma: '+ resultado);
+				resultado=Numero1-Numero2;
+				document.write('<br> Resta: '+ resultado);
+				resultado=Numero1*Numero2;
+				document.write('<br> Producto: '+ resultado);
+				resultado=Numero1%Numero2;
+				document.write('<br> Resto: '+ resultado);
+			">
+		</fieldset>
+	</form>
+	<!--5.Calcula el sueldo del mes de un empleado a partir del número de horas trabajadas y el precio por hora. 
+	Tendremos que descontar el % de IRPF que se indique.-->
+	<form name="ej5">
+		<fieldset>
+			<legend>Introducir los siguientes valores para calcular el salario y el IRPF del mismo</legend>
+			Horas Trabajadas: <input type="text" name="nu1" value="" size="5"><br>
+			Precio de la hora: <input type="text" name="nu2" value="" size="5"><br>
+			IRPF (%): <input type="text" name="nu3" value="" size="5"><br>			
+			<input type="submit" value="Calcular salario" onclick="
+				ht=parseInt(ej5.nu1.value);
+				ph=parseInt(ej5.nu2.value);
+				irpf=parseFloat(ej5.nu3.value);
+				irpfa=(ht*ph)*(irpf/100);
+				salario=(ht*ph)-irpfa;
+				alert('Líquido a percibir: ' + salario + '    Cotizando de IRPF: ' + irpfa);
+			">
+		</fieldset>
+	</form>
+		<!--6.Introduce horas, minutos y segundos y calcula el total de segundos.-->
+	<form name="ej6">
+		<fieldset>
+			<legend>Introduce horas, minutos y segundos para obtener la conversión total en segundos</legend>
+			Horas: <input type="text" name="nu1" value="" size="5"><br>
+			minutos: <input type="text" name="nu2" value="" size="5"><br>
+			segundos: <input type="text" name="nu3" value="" size="5"><br>			
+			<input type="submit" value="Calcular conversión" onclick="
+				horas=parseInt(ej6.nu1.value);
+				minutos=parseInt(ej6.nu2.value);
+				segundos=parseInt(ej6.nu3.value);
+				total=(horas*3600)+(minutos*60)+segundos;
+				alert('La suma total de segundos es: ' + total);
+			">
+		</fieldset>
+	</form>
+	<!--7.Introduce el precio unitario de un producto, el número de unidades compradas, el
+		descuento aplicado y calcula el total con el IVA indicado.-->
+	<form name="ej7">
+		<fieldset>
+			<legend>Indicar el precio, cantidad y el descuento para calcular el precio total y su IVA(21%)</legend>
+			Precio del producto: <input type="text" name="nu1" value="" size="5"><br>
+			Unidades del producto: <input type="text" name="nu2" value="" size="5"><br>
+			Descuento (%): <input type="text" name="nu3" value="" size="5"><br>			
+			<input type="submit" value="Calcular el total" onclick="
+				precio=parseFloat(ej7.nu1.value);
+				cantidad=parseInt(ej7.nu2.value);
+				descuento=parseFloat(ej7.nu3.value);
+				iva=(precio*cantidad)*0.21;
+				total=(precio*cantidad)+iva-(((precio*cantidad)+iva)*(descuento/100));
+				alert('Precio total (iva incluido): ' + total + '€    Iva del producto: ' + iva + '€');
+			">
+		</fieldset>
+	</form>
+	<!--8.Calcula el precio neto y el IVA a partir del precio total introducido por teclado.-->
+	<form name="ej8">
+		<fieldset>
+			<legend>introduce el precio total para saber el iva y el precio sin IVA(21%)</legend>
+			Precio del producto: <input type="text" name="nu1" value="" size="5"><br>	
+			<input type="submit" value="Calcular el total" onclick="
+				precio=parseFloat(ej8.nu1.value);
+				precioinicial=precio/1.21;
+				iva=precio-precioinicial;
+				alert('Precio total (sin iva): ' + precioinicial + '€    Iva del producto: ' + iva + '€');
+			">
+		</fieldset>
+	</form>
+	<!--9.Introducir número y exponente y calcular la potencia.-->
+	<form name="ej9">
+		<fieldset>
+			<legend>introduce la base y el exponente para calcular la potencia</legend>
+			Base: <input type="text" name="nu1" value="" size="5"><br>
+			Exponente: <input type="text" name="nu2" value="" size="5"><br>	
+			<input type="submit" value="Calcular el total" onclick="
+				base=parseInt(ej9.nu1.value);
+				expo=parseInt(ej9.nu2.value);
+				potencia=1;
+				for(i=0;i<expo;i++) {
+					potencia=potencia*base;
+				}
+				alert('La portencia es: ' + potencia);
+			">
+		</fieldset>
+	</form>
+	<!--10.Calcula el sueldo del mes de un empleado a partir del número de horas trabajadas. 
+		El número de horas mensuales son 160. Todas las demás son extras. 
+		Se introduce también el precio por hora normal y el precio por hora extra y el IRPF.-->
+	<form name="ej10">
+		<fieldset>
+			<legend>Introducir los siguientes valores para calcular el salario y el IRPF del mismo</legend>
+			Horas Trabajadas: <input type="text" name="nu1" value="" size="5"><br>
+			Precio de la hora: <input type="text" name="nu2" value="" size="5"><br>
+			Precio de la hora extra: <input type="text" name="nu3" value="" size="5"><br>
+			IRPF (%): <input type="text" name="nu4" value="" size="5"><br>			
+			<input type="submit" value="Calcular salario" onclick="
+				ht=parseInt(ej10.nu1.value);
+				ph=parseInt(ej10.nu2.value);
+				pe=parseInt(ej10.nu3.value);
+				irpf=parseFloat(ej10.nu4.value);
+				if (ht > 160) {
+					pge = pe * (ht - 160);
+				}
+				else {
+					pge = 0;
+				}
+				irpfa=((ht*ph)+pge)*(irpf/100);
+				salario=((ht*ph)+pge)-irpfa;
+				alert('Líquido a percibir: ' + salario + '€    Cotizando de IRPF: ' + irpfa + '€     Salario por las horas cotizadas: ' + pge);
+			">
+		</fieldset>
+	</form>
+	<!--11.Diseña un algoritmo para pasar de grados Fahrenheit a ºC, sabiendo que C = (F-32)*5/9-->
+	<form name="ej11">
+		<fieldset>
+			<legend>introduce los grados para pasarlos a Fahrenheit</legend>
+			Grados celsius: <input type="text" name="nu1" value="" size="5"><br>
+			<input type="submit" value="Calcular Conversión" onclick="
+				celsius=parseFloat(ej11.nu1.value);
+				faren=((9*celsius)+160)/5;
+				alert('Los grados Fahrenheit: ' + faren);
+			">
+		</fieldset>
+	</form>
+	<!--12.Calcula la superficie de un triángulo a partir de la base y la altura sabiendo que s=b*a/2-->
+	<form name="ej12">
+		<fieldset>
+			<legend>introduce la base y la altura del triangulo para calcular su superficie</legend>
+			Base: <input type="text" name="nu1" value="" size="5"><br>
+			Altura: <input type="text" name="nu2" value="" size="5"><br>
+			<input type="submit" value="Calcular Superficie" onclick="
+				base=parseFloat(ej12.nu1.value);
+				alt=parseFloat(ej12.nu2.value);
+				area=(base*alt)/2;
+				alert('Superficie del triangulo: ' + area);
+			">
+		</fieldset>
+	</form>
+	<!--13.Introduce el radio de una circunferencia y halla la longitud y 
+		el área sabiendo que L=2*PI*radio y A=PI*radio2.-->
+	<form name="ej13">
+		<fieldset>
+			<legend>introduce el radio para calcular su longitud y su área</legend>
+			Radio: <input type="text" name="nu1" value="" size="5"><br>
+			<input type="submit" value="Calcular superficie y área" onclick="
+				radio=parseFloat(ej13.nu1.value);
+				longitud=2*3.141516*radio;
+				area=3.141516*(radio*radio);
+				alert('Superficie del circulo: ' + area + '    longitud del circulo: ' + longitud);
+			">
+		</fieldset>
+	</form>
+	<!--14.A partir de un número de días, determinar el número de años, meses y días.-->
+	<form name="ej14">
+		<fieldset>
+			<legend>Introduce el numero de dias para descomponerlo en meses y años</legend>
+			Numero de dias: <input type="text" name="nu1" value="" size="5"><br>
+			<input type="submit" value="Calcular Conversión" onclick="
+				dias=parseInt(ej14.nu1.value);
+				anyo=0;
+				mes=0;
+				while(dias>=365) {
+					anyo++;
+					dias=dias-365;
+				}
+				while(dias>=30) {
+					mes++;
+					dias=dias-30;
+				}
+				alert('Años: ' + anyo + '  Meses: ' + mes + '   dias: ' + dias);
+			">
+		</fieldset>
+	</form>
+	<!--15.Leer un número de cuatro cifras y descomponer en unidades, decenas, centenas y millares.-->
+	<form name="ej15">
+		<fieldset>
+			<legend>Introduce un numero de 4 cifras para descomponerlo</legend>
+			Numero a descomponer: <input type="text" name="nu1" value="" size="5" maxlength="4"><br>
+			<input type="submit" value="Calcular descomposión" onclick="
+				numero=parseInt(ej15.nu1.value);
+				mil=(numero-(numero%1000))*0.001;
+				cen=((numero-(numero%100))*0.01)%10;
+				de=((numero-(numero%10))*0.1)%10;
+				uni=numero%10;
+				alert('miles: ' + mil + '  centenas: ' + cen + '   decenas: ' + de + '   unidades:' + uni);
+			">
+		</fieldset>
+	</form>
+	<a href="../../../index.html">Volver</a>
+</div>	
+</body>
