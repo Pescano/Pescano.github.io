@@ -177,13 +177,14 @@
 				irpf=parseFloat(ej10.nu4.value);
 				if (ht > 160) {
 					pge = pe * (ht - 160);
+					ht= 160;
 				}
 				else {
 					pge = 0;
 				}
 				irpfa=((ht*ph)+pge)*(irpf/100);
 				salario=((ht*ph)+pge)-irpfa;
-				alert('Líquido a percibir: ' + salario + '€    Cotizando de IRPF: ' + irpfa + '€     Salario por las horas cotizadas: ' + pge);
+				alert('Líquido a percibir: ' + salario + '€    Cotizando de IRPF: ' + irpfa + '€     Salario por las horas extras cotizadas: ' + pge);
 			">
 		</fieldset>
 	</form>
@@ -254,15 +255,16 @@
 			<legend>Introduce un numero de 4 cifras para descomponerlo</legend>
 			Numero a descomponer: <input type="text" name="nu1" value="" size="5" maxlength="4"><br>
 			<input type="submit" value="Calcular descomposión" onclick="
-				numero=parseInt(ej15.nu1.value);
-				mil=(numero-(numero%1000))*0.001;
-				cen=((numero-(numero%100))*0.01)%10;
-				de=((numero-(numero%10))*0.1)%10;
-				uni=numero%10;
-				alert('miles: ' + mil + '  centenas: ' + cen + '   decenas: ' + de + '   unidades:' + uni);
+				numero=(ej15.nu1.value);
+				alert('miles: ' + numero[0] + '  centenas: ' + numero[1] + '   decenas: ' + numero[2] + '   unidades: ' + numero[3]);
 			">
 		</fieldset>
 	</form>
+	<!--		otra forma de hacer el apartado 15
+				mil=(numero-(numero%1000))*0.001;
+				cen=((numero-(numero%100))*0.01)%10;
+				de=((numero-(numero%10))*0.1)%10;
+				uni=numero%10;-->
 	<a href="../../../index.html">Volver</a>
 </div>	
 </body>
