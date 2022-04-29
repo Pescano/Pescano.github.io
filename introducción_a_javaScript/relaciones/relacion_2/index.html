@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="Pablo escano martin">
 	<link rel="stylesheet" href="../../../index.css">
+	<script type="text/javascript" src="../../misfunciones.js"></script>
 	<title>Relación 2: Estructuras de control</title>
 </head>
 <body>
@@ -184,6 +185,44 @@
 				for(i=0;i<repeticiones;i++) {
 					document.write((i+1) +'º: ' + frase + '<br>')
 				}
+			">
+		</fieldset>
+	</form>
+		<!--10.Escribe un programa que reciba un número por teclado y devuelva si es primo o no con una funcion-->
+		<form name="ej10">
+			<fieldset>
+				<legend>Introduce el numero que desees para saber si es primo</legend>
+				Número: <input type="text" name="nu1" value="" size="5"><br>	
+				<input type="submit" value="Verificar" onclick="
+					if (primo(ej10.nu1.value)) {
+						/*document.getElementById('r1').innerHTML = 'El número ' + ej10.nu1.value + ' es primo'; */
+						alert('El numero: ' + ej10.nu1.value + ' es primo');
+					}
+					else {
+						/*document.getElementById('r1').innerHTML = 'El número ' + ej10.nu1.value + ' no es primo'; */
+						alert('El numero: ' + ej10.nu1.value + ' no es primo');
+					}
+				">
+				<!--<p id="r1"></p> -->
+			</fieldset>
+		</form>
+			<!--11.Escribe un programa que reciba un número por teclado y una frase. 
+		El programa transformar el texto como si fuera un hack-->
+	<form name="ej11">
+		<fieldset>
+			<legend>Introduce una frase para transformarla</legend>
+			Frase: <input type="text" name="nu1" value="" size="20"><br>	
+			<input type="submit" value="Tranformar" onclick="
+				const frase =(ej11.nu1.value);
+				let fraseo = frase.replaceAll( 'a', '4');
+				fraseo = fraseo.replaceAll( 'e', '3');
+				fraseo = fraseo.replaceAll( 'i', '1');
+				fraseo = fraseo.replaceAll( 'o', '0');
+				fraseo = fraseo.replaceAll( 'E', '3');
+				fraseo = fraseo.replaceAll( 'I', '1');
+				fraseo = fraseo.replaceAll( 'O', '0');
+				fraseo = fraseo.replaceAll( 'A', '4');
+				alert('La frase original: ' + frase + '   ' + 'La frase modificada: ' + fraseo);
 			">
 		</fieldset>
 	</form>
