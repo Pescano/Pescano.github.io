@@ -39,10 +39,10 @@
 				nu1=parseInt(ej2.n1.value);
 				nu2=parseInt(ej2.n2.value);
 				nu3=parseInt(ej2.n3.value);
-				var datos = [nu1, nu2, nu3, 'fin'];
+				var datos = [nu1, nu2, nu3];
 				i=0;
 				mayor = datos[i];
-				while (datos[i+1] != 'fin') {
+				while (datos[i+1] != null) {
 					if(datos[i] < datos[i+1]) {
 						mayor = datos[i+1];
 					}
@@ -137,7 +137,7 @@
 				numero=1;
 				while (numero<51) {
 					if(numero%3 == 0) {
-						document.write(numero + '<br>')
+						document.write(numero + '<br>');
 					}
 					numero++;
 				}	

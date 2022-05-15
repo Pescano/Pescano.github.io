@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+
+	<title>Tema7 DOM</title>
+</head>
+<body>
+	<!--1º Agregar parrafos con numeros del 1 al 5 (diapositva 16)
+		2º Cada parrafo tendrá su id correspondiente = "contenedor-ID" (diapositiva 20)
+		3º Asignar evento onclick que elimine el nodo (diapositiva 19)
+		4º Asignar evento onmouseenter que añada una clase o estilo (diapositiva 21/22)
+		5º Asignar evento onmouseout que elimine una clase o estilo (diapositiva 21/22)
+		6º implemantar la funcion array.foreach
+		7º Realizar las selecciones con querrySelectorAll-->
+	<script>
+	const arrayDeNumeros = ['1', '2', '3', '4', '5'];
+	function cambiacolor (id, color)
+		{
+			let nodo=document.getElementById('contenedor-' + id);
+			nodo.setAttribute('style', 'color:' + color);
+		}
+	function killnodo (id) 
+		{
+			let nodo=document.getElementById('contenedor-' + id);
+			nodo.parentNode.removeChild(nodo);
+		}
+	function crearnodo(i)
+		{
+			let newP = document.createElement('p');
+			let newContent = document.createTextNode(i);
+			newP.appendChild(newContent);
+			document.body.appendChild(newP);
+			newP.setAttribute('id', 'contenedor-' + i);
+			newP.onclick = function() {killnodo(i);};
+			newP.onmouseenter = function() {cambiacolor(i, 'red');};
+			newP.onmouseout = function() {cambiacolor(i, '');};
+		}
+		arrayDeNumeros.forEach((numero)=>{crearnodo(numero)});
+		const contenedores = document.querySelectorAll("[id^='contenedor-']"); // crea una lista con los elementos cuya id empiece por eso
+		Array.from(contenedores); // crea un array de los elementos listados anteriormente
+		/*for(i=1;i<6;i++)
+		{
+			crearnodo(i);
+		}*/
+	</script>
+	<a href="../index.html">Volver</a>
+	<!--
+	<form name="f1">
+		Introduce el id del parrafo a eliminar: <input type="text" name="nu1" size="5"/>
+	</form>
+	<a href="javascript:killnodo(f1.nu1.value)">Eliminar</a>
+	-->
+</body>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Pablo escano martin">
+	<link rel="stylesheet" href="../../../index.css">
+	<script type="text/javascript" src="../../misfunciones.js"></script>
+	<title>Relación 2: Estructuras de control - Extendida</title>
+</head>
+<body>
+<div id="content">
+	<!--1. Introducir un número y determinar si está comprendido entre 1 y 10.-->
+	<form name="ej1">
+		<fieldset>
+			<legend style="text-decoration: none;">Introduce un numero para determinar si esta entre 1 y 10</legend>
+			Numero: <input type="text" name="n1" value="" size="5"><br>
+			<input type="submit" value="Verificar" onclick="
+				numero=parseInt(ej1.n1.value);
+				if (numero > 0 && numero < 11)
+				{
+					alert('el numero esta entre 1 y 10');
+				}
+				else {
+					alert('el numero no esta entre 1 y 10');
+				}
+			">
+		</fieldset>
+	</form>
+	<!--2.Introduce un número y calcula si es positivo o negativo-->
+	<form name="ej2">
+		<fieldset>
+			<legend>Introduce un número para ver si es negativo</legend>
+			Numero: <input type="text" name="n1" value="" size="5"><br>
+			<input type="submit" value="Verificar" onclick="
+				nu1=parseInt(ej2.n1.value);
+  				if (nu1>0) 
+				{
+					alert('Es positivo');
+				}
+				else if (nu1<0)
+				{
+					alert('Es negativo');
+				}
+				else
+				{
+					alert('este valor no es ni positivo ni negativo o no es valido');
+				}
+			">
+		</fieldset>
+	</form>
+	<!--3.Introduce tres números y determina cuál es el mayor.-->
+	<form name="ej3">
+		<fieldset>
+			<legend>Introduce tres numeros para ver cual es el mayor</legend>
+			Numero 1: <input type="text" name="n1" value="" size="5"><br>
+			Numero 2: <input type="text" name="n2" value="" size="5"><br>
+			Numero 3: <input type="text" name="n3" value="" size="5"><br>
+			<input type="submit" value="Seleccionar el mayor" onclick="
+				nu1=parseInt(ej3.n1.value);
+				nu2=parseInt(ej3.n2.value);
+				nu3=parseInt(ej3.n3.value);
+				var datos = [nu1, nu2, nu3];
+				i=0;
+				mayor = datos[i];
+				while (datos[i+1] != null) {
+					if(datos[i] < datos[i+1]) {
+						mayor = datos[i+1];
+					}
+					i++;
+				}
+				alert('El mayor es: ' + mayor);
+			">
+		</fieldset>
+	</form>
+	<!--4.Introduce tres números y muéstralos ordenados de menor a mayor.-->
+	<form name="ej4">
+		<fieldset>
+			<legend>Introduce tres numeros para ordenarlos</legend>
+			Numero 1: <input type="text" name="n1" value="" size="5"><br>
+			Numero 2: <input type="text" name="n2" value="" size="5"><br>
+			Numero 3: <input type="text" name="n3" value="" size="5"><br>
+			<input type="submit" value="Ordenar numeros" onclick="
+				nu1=parseInt(ej4.n1.value);
+				nu2=parseInt(ej4.n2.value);
+				nu3=parseInt(ej4.n3.value);
+				if(nu1>nu2) {
+					aux=nu1;
+					nu1=nu2;
+					nu2=aux;
+				}
+				if(nu1>nu3) {
+					aux=nu1;
+					nu1=nu3;
+					nu3=aux;
+				}
+				if(nu2>nu3) {
+					aux=nu2;
+					nu2=nu3;
+					nu3=aux;
+				}
+				alert('numeros de menor a mayor: ' + nu1 + ', ' + nu2 + ', ' + nu3);
+			">
+		</fieldset>
+	</form>
+	<!--5.Introducir una nota numérica y devolver Suficiente, Notable, Bien, con switch.-->
+	<form name="ej5">
+		<fieldset>
+			<legend>Introduce un valor del 0-10 para devolver la nota</legend>
+			Valor: <input type="text" name="nu1" value="" size="5"><br>
+			<input type="submit" value="Mostrar la nota" onclick="
+				valor=parseInt(ej5.nu1.value);
+				switch (valor) {
+  					case 10: case 9:
+					alert('Sobresaliente');
+					break;
+  					case 8: case 7:
+					alert('Notable');
+					break;
+  					case 6:
+					alert('Bien');
+					break;
+  					case 5:
+					alert('Suficiente');
+					break;
+					case 4: case 3: case 2: case 1: case 0:
+					alert('Suspenso')
+					break;
+  					default:
+					alert('Valor no valido');
+				}
+			">
+		</fieldset>
+	</form>
+	<!--6.Programa que imprima los números impares comprendidos entre 100 y 200.-->
+	<form name="ej6">
+		<fieldset>
+			<legend>Pulsa para imprimir los impares entre 100-200</legend>			
+			<input type="submit" value="mostrar los impares" onclick="
+				numero=100;
+				while (numero<201) {
+					switch (numero%10) {
+						case 1: case 3: case 5: case 7: case 9:
+						document.write(numero + '<br>');
+						break;
+						default:
+					}
+					numero++;
+				}
+			">
+		</fieldset>
+	</form>
+	<!--7.Programa que muestre todos los múltiplos de 3 comprendidos entre 1 y 100.-->
+	<form name="ej7">
+		<fieldset>
+			<legend>Pulsar para mostrar los multiplos de 3 comprendidos entre 1 y 100</legend>
+			<input type="submit" value="Mostrar multiplos" onclick="
+				numero=1;
+				while (numero<101) {
+					if(numero%3 == 0) {
+						document.write(numero + '<br>');
+					}
+					numero++;
+				}	
+			">
+		</fieldset>
+	</form>
+	<!--8.Calcular la suma de todos los múltiplos de cinco comprendidos entre 1 y 100-->
+	<form name="ej8">
+		<fieldset>
+			<legend>Pulsar para mostrar la suma de todos los múltiplos de cinco comprendidos entre 1 y 100</legend>
+			<input type="submit" value="Mostrar suma" onclick="
+				numero=1;
+				suma=0;
+				while (numero<101) {
+					if(numero%5 == 0) {
+						suma=suma+numero;
+					}
+					numero++;
+				}
+				alert('La suma de los multiplos es: ' + suma);
+			">
+		</fieldset>
+	</form>
+	<!--9.Calcular la suma de todos los pares comprendidos entre 1 y 1000 y muéstralo-->
+	<form name="ej9">
+		<fieldset>
+			<legend>Pulsar para mostrar la suma y todos los pares comprendidos entre 1 y 1000</legend>
+			<input type="submit" value="Mostrar la suma y los pares" onclick="
+				numero=1;
+				suma=0;
+				while (numero<1001) {
+					if(numero%2 == 0) {
+						suma=suma+numero;
+						document.write(numero + '<br>');
+					}
+					numero++;
+				}
+				document.write('La suma de los multiplos es: ' + suma);
+			">
+		</fieldset>
+	</form>
+	<!--10.Calcula la suma de todos los números comprendidos entre dos números introducidos por teclado-->
+	<form name="ej10">
+		<fieldset>
+			<legend>Introduce dos numeros para sumar su intervalo </legend>		
+			<input type="submit" value="Empezar a sumar" onclick="
+				suma=0;
+				numero1=parseInt(prompt('introduce el primero numero: '));
+				ini = numero1;
+				numero1=numero1+1;
+				numero2=parseInt(prompt('introduce el último numero: '));
+				while (numero1 < numero2) {
+					suma = suma + numero1;
+					numero1++;
+				}
+				alert('La suma del intervalo ' + ini + ' - ' + numero2 + ' es: ' + suma);
+			">
+		</fieldset>
+	</form>
+	<!--11.Introduce un número y calcula si es par o impar con bucles-->
+	<form name="ej11">
+		<fieldset>
+			<legend>Introduce un número para ver si es par o impar </legend>
+			Número: <input type="text" name="nu1" value="" size="5"><br>		
+			<input type="submit" value="Verificar" onclick="
+				n1=parseInt(ej11.nu1.value);
+				if (n1%2==0) {
+					alert('El numero es PAR');
+				}
+				else {
+					alert('El numero es IMPAR')
+				}
+			">
+		</fieldset>
+	</form>
+	<!--12.Introduce un número y un exponente y calcular la potencia usando bucles-->
+	<form name="ej12">
+		<fieldset>
+			<legend>Introduce un número y su exponente para ver su potencia </legend>
+			Base: <input type="text" name="nu1" value="" size="5"><br>
+			Exponente: <input type="text" name="nu2" value="" size="5"><br>		
+			<input type="submit" value="Calcular" onclick="
+				base=parseInt(ej12.nu1.value);
+				exp=parseInt(ej12.nu2.value);
+				potencia=1;
+				for(i=0;exp>i;i++) {
+					potencia = potencia*base;
+				}
+				alert('La potencia es: ' + potencia);
+			">
+		</fieldset>
+	</form>
+	<!--13.Lee todos los números hasta introducir el cero y súmalos (prompt).-->
+	<form name="ej13">
+		<fieldset>
+			<legend>Introduce numeros hasta un 0 para sumarlos</legend>		
+			<input type="submit" value="Empezar a sumar" onclick="
+				suma=0;
+				numero=1;
+				while (numero != 0) {
+					numero=prompt('introduce un numero: ');
+					suma = suma + parseInt(numero);
+				}
+				alert('La suma es: ' + suma);
+			">
+		</fieldset>
+	</form>
+	<!--14.Lee todos los números hasta introducir el cero y calcula la media (prompt).-->
+	<form name="ej14">
+		<fieldset>
+			<legend>Introduce numeros hasta un 0 para hacer la media</legend>		
+			<input type="submit" value="Empezar la media" onclick="
+				media=0;
+				numero=1;
+				i=-1;
+				while (numero != 0) {
+					numero=prompt('introduce un numero: ');
+					media = media + parseFloat(numero);
+					i++;
+				}
+				alert('La suma es: ' + (media/i));
+			">
+		</fieldset>
+	</form>
+	<!--15.Lee todos los números hasta introducir el cero y calcula el máximo y el mínimo-->
+	<form name="ej15">
+		<fieldset>
+			<legend>Introduce numeros hasta un 0 para sacar el máximo y el mínimo</legend>		
+			<input type="submit" value="Sacar el máximo y mínimo" onclick="
+				numero=1;
+				maximo=0;
+				minimo=0;
+				while (numero != 0) {
+					numero=parseInt(prompt('Ingrese numero: '));
+					if (numero < minimo) {
+						minimo = numero;
+					}
+					if (numero > maximo){
+						maximo = numero;
+					}
+				}
+				alert('max: ' + maximo + ' Minimo: ' + minimo);
+			">
+		</fieldset>
+	</form>
+	<!--16.Calcula la división de dos números introducidos utilizando restas sucesivas-->
+	<form name="ej16">
+		<fieldset>
+			<legend>Introduce un número y su divisor</legend>
+			Número: <input type="text" name="nu1" value="" size="5"><br>
+			Divisor: <input type="text" name="nu2" value="" size="5"><br>			
+			<input type="submit" value="Dividir" onclick="
+				dividendo = parseInt(ej16.nu1.value);
+				divisor = parseInt(ej16.nu2.value);
+				cociente = 0;
+				resto = dividendo;
+				while ( resto >= divisor )
+				{
+					resto -= divisor;
+					cociente++;
+				}
+				alert('Dividendo: ' + dividendo + ' Divisor: ' + divisor + ' Cociente: ' + cociente + ' Resto: ' + resto);
+			">
+		</fieldset>
+	</form>
+	<!--17.Introducir números por teclado y contar los positivos y los negativos. El programa termina cuando se introduce
+	un cero y muestra el resultado-->
+	<form name="ej17">
+		<fieldset>
+			<legend>Introduce numeros para contar los positivos y negativos. Para acabar introduzca 0</legend>		
+			<input type="submit" value="Empezar a contar" onclick="
+				numero=1;
+				negativo=0;
+				positivo=-1;
+				while (numero != 0) {
+					numero=parseInt(prompt('Ingrese numero: '));
+					if (numero < 0) {
+						negativo++;
+					}
+					if (numero > 0) {
+						positivo++;
+					}
+				}
+				alert('Números positivos totales: ' + positivo + '| Números negativos totales: ' + negativo);
+			">
+		</fieldset>
+	</form>
+	<!--18.Calcula el cuadrado de todos los números comprendidos entre dos números introducidos por teclado.-->
+	<form name="ej18">
+		<fieldset>
+			<legend>Introduce dos numeros para ver sus cuadrados </legend>		
+			<input type="submit" value="Mostrar potencias por intervalos" onclick="
+				numero1=parseInt(prompt('introduce el primero numero: '));
+				numero1=numero1+1;
+				numero2=parseInt(prompt('introduce el último numero: '));
+				while (numero1 < numero2) {
+					document.write((numero1*numero1) + '<br>');
+					numero1++;
+				}
+			">
+		</fieldset>
+	</form>
+	<!--19. Escribe un programa que calcule la multiplicación de dos números introducidos por
+		teclado sin utilizar el operador * (usando sumas sucesivas).-->
+	<form name="ej19">
+		<fieldset>
+			<legend>Introduce un número su multiplicador</legend>		
+			<input type="submit" value="multiplicador" onclick="
+				numero=parseInt(prompt('Ingrese numero: '));
+				multiplicador=parseInt(prompt('Ingrese el multiplicador: '));
+				resultado=0;
+				for (i=0;multiplicador>i;i++)
+				{
+					resultado=resultado+numero;
+				}
+				alert(numero + ' * ' + multiplicador + ' = ' + resultado);
+			">
+		</fieldset>
+	</form>
+	<!--20.Realizar el programa que imprima 5 veces en la pantalla los números
+		comprendidos entre 1 y 20 usando dos bucles.-->
+	<form name="ej20">
+		<fieldset>
+			<legend>Pulsar para mostrar los numeros comprendidos entre 1 y 20. 5 veces</legend>
+			<input type="submit" value="Mostrar intervalo" onclick="
+				for(i=0;i<5;i++)
+				{
+					numero=1;
+					while (numero<21) {
+							document.write(numero + '<br>');
+						numero++;
+					}	
+				}
+			">
+		</fieldset>
+	</form>
+	<!--21.Escribe un programa que reciba un número por teclado y devuelva si es primo o no con una funcion-->
+	<form name="ej21">
+		<fieldset>
+			<legend>Introduce el numero que desees para saber si es primo</legend>	
+			<input type="submit" value="empezar verificación" onclick="
+				numero=parseInt(prompt('Ingrese numero: '));
+				if (primo(numero)) {
+					alert('El numero: ' + numero + ' es primo');
+				}
+				else {
+					alert('El numero: ' + numero + ' no es primo');
+				}
+			">
+		</fieldset>
+	</form>
+	<!--22.Realizar el programa que muestre por pantalla la tabla de multiplicar de un número dado.-->
+	<form name="ej22">
+		<fieldset>
+			<legend>Pulsar para mostrar la tabla de multiplicar de un numero</legend>
+			<input type="submit" value="Mostrar tabla" onclick="
+				numero=parseInt(prompt('Ingrese numero: '));
+				for(i=1;i<11;i++)
+				{
+					document.write(numero + ' * ' + i + ' = ' + (numero*i) + '<br>');	
+				}
+			">
+		</fieldset>
+	</form>
+	<!--23.Escribe un programa que reciba un número por teclado y una frase. 
+		El programa deberá mostrar esa frase por pantalla tantas veces como se le indique en el número.-->
+	<form name="ej23">
+		<fieldset>
+			<legend>Introduce una frase para repetirla el numero de veces que desee</legend>
+			Frase: <input type="text" name="nu1" value="" size="5"><br>
+			Repeticiones: <input type="text" name="nu2" value="" size="5"><br>	
+			<input type="submit" value="Mostrar repeticiones" onclick="
+				frase=(ej23.nu1.value);
+				repeticiones=parseInt(ej23.nu2.value);
+				for(i=0;i<repeticiones;i++) {
+					document.write((i+1) +'º: ' + frase + '<br>')
+				}
+			">
+		</fieldset>
+	</form>
+	<!--24. Programa que calcule el factorial de un número introducido por teclado, sabiendo
+		que la fórmula del factorial el factorial (n) = n * factorial (n-1).-->
+	<form name="ej24">
+		<fieldset>
+			<legend>Introduce un numero para calcular su factorial</legend>	
+			<input type="submit" value="Mostrar factorial" onclick="
+				numero=parseInt(prompt('Ingrese numero: '));
+				document.write(factorial(numero));
+			">
+		</fieldset>
+	</form>
+	<!--25. Tomando del teclado el precio por unidad de un determinado producto, se
+		pretende imprimir un listado con los precios para unidades desde 1 a 100. Se
+		deben aplicar una serie de descuentos, a saber: 10% a partir de 15 unidades, 15% a
+		partir de 30 unidades, 20% a partir de 50 unidades.-->
+		<form name="ej25">
+			<fieldset>
+				<legend>Introduce el precio del producto y las unidades para calcular el precio de sus unidades</legend>	
+				<input type="submit" value="Mostrar precios" onclick="
+					precio=parseFloat(prompt('Ingrese su precio: '));
+					document.write('De 1 a 14 unidades el precio por unidad costará: ' + precio + '<br>');
+					document.write('De 15 a 29 unidades el precio por unidad costará un -10%: ' + (precio*0.9)+ '<br>');
+					document.write('De 30 a 49 unidades el precio por unidad costará un -15%: ' + (precio*0.85)+ '<br>');
+					document.write('De 50 a 100 unidades el precio por unidad costará un -20%: ' + (precio*0.8)+ '<br>');
+				">
+			</fieldset>
+		</form>
+	<!--26. Programa que pida dos números por teclado y calcule si el segundo es múltiplo del primero.-->
+		<form name="ej26">
+			<fieldset>
+				<legend>Introduce dos números para ver ssi son múltiplos</legend>	
+				<input type="submit" value="Verificar" onclick="
+					numero1=parseInt(prompt('Ingrese el primer número: '));
+					numero2=parseInt(prompt('Ingrese el segundo número: '));
+    				if ((numero2%numero1)>0) {
+						alert(numero2 + ' y ' + numero1 + ' No son múltiplos');
+					}
+    				else {
+						alert(numero2 + ' y ' + numero1 + ' Si son múltiplos');
+					}
+				">
+			</fieldset>
+		</form>
+	<a href="../../../index.html">Volver</a>
+</div>	
+</body>
